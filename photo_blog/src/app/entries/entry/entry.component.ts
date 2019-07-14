@@ -5,4 +5,13 @@ import { Component } from "@angular/core";
   templateUrl: "entry.component.html",
   styleUrls: ["entry.component.css"]
 })
-export class EntryComponent {}
+export class EntryComponent {
+  title: string = "photo";
+  photo: string = "http://placehold.it/800x500?text=Angular Basics";
+  description: string = "Description";
+  comments: any[] = [
+    { name: "Johnx", comment: "this is a comment" },
+    { name: "Johny", comment: "this is a comment" },
+    { name: "Johnz", comment: "this is a comment" }
+  ];
+}
