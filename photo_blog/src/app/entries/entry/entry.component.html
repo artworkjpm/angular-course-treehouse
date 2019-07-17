@@ -1,4 +1,4 @@
-<h2 (click)="changeEmoji()">{{ entry.title }}</h2>
+<h2 (click)="changeEmoji()">{{ entry.title }} {{ activeEmoji }}</h2>
 <figure>
   <!--  <img src="{{ entry.photo }}" alt="angular" /> -->
   <figcaption>{{ entry.description }}</figcaption>
@@ -22,3 +22,7 @@
     </p>
   </div>
 </div>
+
+<app-entry-comment-form
+  (onCommentAdded)="onCommentAdded($event)"
+></app-entry-comment-form>

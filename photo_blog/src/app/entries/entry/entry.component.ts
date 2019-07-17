@@ -8,4 +8,15 @@ import { Entry } from "../shared/entry.model";
 })
 export class EntryComponent {
   @Input() entry: Entry;
+  emoji = ["🤡", "🤥", "🤫", "🤭", "🧐", "🤓"];
+  activeEmoji: string;
+  changeEmoji() {
+    this.activeEmoji = this.emoji[
+      Math.floor(Math.random() * this.emoji.length)
+    ];
+  }
+
+  onCommentAdded(comment: { name: string; comment: string }) {
+    this.entry.comments.push(comment);
+  }
 }
